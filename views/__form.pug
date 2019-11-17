@@ -1,0 +1,45 @@
+extend layouts/layout
+block title
+    h1 Surat
+block content
+    div
+        div(class="row")
+            div(class="col-md-12")
+                div(class="box box-primary")
+                    div(class="box-body")
+                        div(class="col-xs-12 col-md-6 col-xl-6 col-lg-6")
+                            div(class="form-group")
+                                label( for="id_costumer") Costumer Name
+                                select( name="id_costumer" id="id_costumer" class="form-control")
+                                    option( value="") Pilih Costumer
+                                    option( value="") Pilih Costumer
+                                    option( value="") Pilih Costumer
+                                    option( value="") Pilih Costumer
+                            div(class="form-group")
+                                label(for="id_mobil") Merk Mobil
+                                select(name="id_mobil" id="id_mobil" class="form-control")
+                                    option( value="") Pilih Mobil
+                                    option( value="") Pilih Mobil
+                                    option( value="") Pilih Mobil
+                                    option( value="") Pilih Mobil
+                            div(class="form-group")
+                                label(for="status") Status
+                                input(id="status" class="form-control" type="checkbox" name="status" data-toggle="toggle" data-on="Dikembalikan" data-off="Masih Dipinjam" data-onstyle="success" data-offstyle="danger")
+                        div(class="col-xs-12 col-md-6 col-xl-6 col-lg-6")
+                            div(class="form-group")
+                                label(for="tanggal_pinjam") Tanggal Pinjam
+                                div(class="input-group date")
+                                    span(class="input-group-addon")
+                                        span(class="glyphicon glyphicon-calendar")
+                                    input(type="text" class="form-control" id="datetimepicker1" name="tanggal_pinjam" placeholder="Tanggal Pinjam")
+                            div(class="form-group")
+                                label(for="tanggal_kembali") Tanggal Kembali
+                                div(class="input-group date")
+                                    span(class="input-group-addon")
+                                        span(class="glyphicon glyphicon-calendar")
+                                    input(type="text" class="form-control" id="datetimepicker2" name="tanggal_kembali" placeholder="Tanggal Kembali")
+                            p ( Jangan isi jika tidak ingin mengubah data )
+                    div(class="box-footer")
+                        div(class="form-group pull-right")
+                            button(class="btn btn-success" style="margin-right:10px" onclick="return confirm('Apakah data yang anda masukkan sudah benar ?')") Submit
+                            a(href="#" class="btn btn-danger text-white") Cancel

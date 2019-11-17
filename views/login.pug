@@ -1,0 +1,33 @@
+doctype
+html(lang='en')
+    head
+        meta(charset='utf-8')
+        title Login
+        meta(content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport")
+        link(rel="stylesheet", href="css/login.css")
+        link(rel="stylesheet", href="/adminlte/bower_components/font-awesome/css/font-awesome.css")
+    body
+        div(class="container")
+            //-if login error
+            unless err == null
+                div(class="error") <i class="fa fa-times"></i>  #{err}
+            div(class="box")
+                div(class="box-head")
+                    span(class="title") LOGIN
+                div(class="box-body")
+                    i(class="icon fa fa-user")
+                    form(action="" method="POST" class="form")
+                        div(class="from-group")
+                            input(type="text" class="form-control" id="username" name="username" placeholder="Username" autocomplete="off")
+                        div(class="from-group")
+                            div(class="anu")
+                                input(type="password" class="form-control" id="password" name="password" placeholder="Password")
+                                span(class="fa fa-eye showing")
+                        button(class="btn") Login
+                div(class="box-footer")
+                    span 2019
+    //-import Javascript file
+    script(src="adminlte/bower_components/jquery/dist/jquery.min.js")
+    //-Include Javascript file
+    script
+        include ../public/js/script.js

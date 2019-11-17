@@ -1,0 +1,22 @@
+extends layouts/layout
+block title
+    h1 Buku
+block content
+    div
+        div(class="row")
+            div(class="col-md-12")
+                div(class="box box-primary")
+                    div(class="box-body")
+                        table(class="table table-bordered table-striped")
+                            thead
+                                th ID
+                                th Judul
+                                th Pengarang
+                                th Tahun Terbit
+                            tbody
+                            each row in data
+                                tr
+                                    td= row.id_buku
+                                    td= row.judul
+                                    td= row.pengarang
+                                    td= row.tahun_terbit
